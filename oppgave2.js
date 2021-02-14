@@ -31,4 +31,6 @@ fetch(url)
 .catch(error => {
   console.error(error.message);
   thediv.innerHTML = `<div class="error">Does not work</div>`;    
-});
+})
+.finally(()=> thediv.classList.remove("spinner-border"))
+
